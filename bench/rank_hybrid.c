@@ -127,6 +127,7 @@ int main(int argc, char **argv) {
 
 	end_time = spasm_wtime();
 	fprintf(stderr, "done in %.3f s rank = %d\n", end_time - start_time, rank);
+	printf("rank of A = %d [%.1fs]\n", rank, end_time - start_time);
 	spasm_csr_free(A);
 	free(p);
 	free(qinv);
